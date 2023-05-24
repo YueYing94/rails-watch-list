@@ -41,3 +41,10 @@
     <%= f.submit class:"btn btn-primary" %>
   <% end %>
 </div>
+
+<ul>
+  <% @list.reviews.each do |review| %>
+  <li><%= review.comment %></li>
+  <% end %>
+</ul>
+<%= render "form", list: @list, bookmark: @bookmark %>
